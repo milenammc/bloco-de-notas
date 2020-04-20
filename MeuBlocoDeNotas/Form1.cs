@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using MySql.Data.MySqlClient;
 
-//Novo Comentário definido
+//Ramifiquei
 namespace MeuBlocoDeNotas {
     public partial class formulario : Form {
         public formulario() { //Construtor Padrão
