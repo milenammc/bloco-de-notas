@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuBlocoDeNotas", "MeuBlocoDeNotas.csproj", "{C40FCC76-62CE-4076-B894-0A5B57FC658B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstaladorBlocoDeNotas", "Instalador\InstaladorBlocoDeNotas\InstaladorBlocoDeNotas.vdproj", "{5165BB40-1712-4824-8C07-F3D525A57A9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C40FCC76-62CE-4076-B894-0A5B57FC658B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C40FCC76-62CE-4076-B894-0A5B57FC658B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C40FCC76-62CE-4076-B894-0A5B57FC658B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C40FCC76-62CE-4076-B894-0A5B57FC658B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5165BB40-1712-4824-8C07-F3D525A57A9C}.Debug|Any CPU.ActiveCfg = Debug
+		{5165BB40-1712-4824-8C07-F3D525A57A9C}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B753D977-4C0F-4330-B899-D7C907138A35}
+	EndGlobalSection
+EndGlobal
