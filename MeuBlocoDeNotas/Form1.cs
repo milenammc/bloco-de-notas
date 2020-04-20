@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using MySql.Data.MySqlClient;
 
-//Meus testes
+//TESTE
 namespace MeuBlocoDeNotas {
     public partial class formulario : Form {
         public formulario() { //Construtor Padrão
