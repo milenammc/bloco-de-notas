@@ -35,6 +35,11 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.cmbCidade = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Cod = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +49,7 @@
             this.arquivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(399, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(441, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -56,27 +61,28 @@
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
+            this.arquivoToolStripMenuItem.Click += new System.EventHandler(this.arquivoToolStripMenuItem_Click);
             // 
             // salvarToolStripMenuItem
             // 
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salvarToolStripMenuItem.Text = "Salvar";
             this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // txtJanela
             // 
-            this.txtJanela.Location = new System.Drawing.Point(0, 27);
+            this.txtJanela.Location = new System.Drawing.Point(153, 61);
             this.txtJanela.Multiline = true;
             this.txtJanela.Name = "txtJanela";
-            this.txtJanela.Size = new System.Drawing.Size(399, 152);
+            this.txtJanela.Size = new System.Drawing.Size(276, 76);
             this.txtJanela.TabIndex = 1;
             // 
             // saveFileDialog1
@@ -85,7 +91,7 @@
             // 
             // btnConecta
             // 
-            this.btnConecta.Location = new System.Drawing.Point(240, 224);
+            this.btnConecta.Location = new System.Drawing.Point(282, 247);
             this.btnConecta.Name = "btnConecta";
             this.btnConecta.Size = new System.Drawing.Size(147, 23);
             this.btnConecta.TabIndex = 2;
@@ -96,7 +102,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 182);
+            this.label1.Location = new System.Drawing.Point(150, 193);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 4;
@@ -104,7 +110,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(12, 198);
+            this.txtNome.Location = new System.Drawing.Point(153, 209);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(114, 20);
             this.txtNome.TabIndex = 7;
@@ -112,7 +118,7 @@
             // cmbCidade
             // 
             this.cmbCidade.FormattingEnabled = true;
-            this.cmbCidade.Location = new System.Drawing.Point(148, 197);
+            this.cmbCidade.Location = new System.Drawing.Point(153, 162);
             this.cmbCidade.Name = "cmbCidade";
             this.cmbCidade.Size = new System.Drawing.Size(239, 21);
             this.cmbCidade.TabIndex = 8;
@@ -120,18 +126,67 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(145, 182);
+            this.label3.Location = new System.Drawing.Point(150, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Escolha uma cidade";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(50, 74);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(42, 20);
+            this.textBox1.TabIndex = 10;
+            // 
+            // Cod
+            // 
+            this.Cod.AutoSize = true;
+            this.Cod.Location = new System.Drawing.Point(9, 77);
+            this.Cod.Name = "Cod";
+            this.Cod.Size = new System.Drawing.Size(26, 13);
+            this.Cod.TabIndex = 11;
+            this.Cod.Text = "Cod";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Deletar Dado";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(153, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Inserir Dados";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(17, 114);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "Deletar";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            // 
             // formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 255);
+            this.ClientSize = new System.Drawing.Size(441, 283);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Cod);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbCidade);
             this.Controls.Add(this.txtNome);
@@ -163,6 +218,11 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.ComboBox cmbCidade;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label Cod;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 

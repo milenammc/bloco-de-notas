@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.IO;
 using MySql.Data.MySqlClient;
 
-//Ramifiquei
 namespace MeuBlocoDeNotas {
     public partial class formulario : Form {
         public formulario() { //Construtor Padrão
@@ -45,8 +44,8 @@ namespace MeuBlocoDeNotas {
         private void button1_Click(object sender, EventArgs e) {
             try
             {
-                //MySqlConnection objetoconexao = new MySqlConnection("server=localhost;port=3306;User Id=root;database=bd_blocodenotas;password=Banco,1997");
-                MySqlConnection objetoconexao = new MySqlConnection("server=db4free.net;port=3306;User Id=milenammc;database=bd_blocodenotas;password=Banco,1997;old guids=true");
+                MySqlConnection objetoconexao = new MySqlConnection("server=localhost;port=3306;User Id=root;database=bd_blocodenotas;password=Banco,1997");
+                //MySqlConnection objetoconexao = new MySqlConnection("server=db4free.net;port=3306;User Id=milenammc;database=bd_blocodenotas;password=Banco,1997;old guids=true");
                 objetoconexao.Open();
 
                 //Comando SQL para inserir dados na tabela
@@ -69,6 +68,12 @@ namespace MeuBlocoDeNotas {
             }
         }
 
+
+     
+        private void button1_Click_1(object sender, EventArgs e) {
+            
+        }
+
         private void label3_Click(object sender, EventArgs e) {
 
         }
@@ -79,8 +84,44 @@ namespace MeuBlocoDeNotas {
             cmbCidade.Items.Add("Guaratinguetá");
         }
 
-        private void button1_Click_1(object sender, EventArgs e) {
-        
+        private void btnDelete_Click(object sender, EventArgs e) {
+            
         }
+
+        private void arquivoToolStripMenuItem_Click(object sender, EventArgs e) {
+
+        }
+
+        //DELETAR DO BANCO DE DADOS
+        private void btnDelete_Click_1(object sender, EventArgs e) {
+
+            try
+            {
+                MySqlConnection objetoconexao = new MySqlConnection("server=localhost;port=3306;User Id=root;database=bd_blocodenotas;password=Banco,1997");
+                //MySqlConnection objetoconexao = new MySqlConnection("server=db4free.net;port=3306;User Id=milenammc;database=bd_blocodenotas;password=Banco,1997;old guids=true");
+                objetoconexao.Open();
+
+                //Comando SQL para inserir dados na tabela
+                MySqlCommand comando = new MySqlCommand("delete from tb_dados where cod = ?;", objetoconexao);
+                //Parâmetros do comando inserir
+                comando.Parameters.Clear();
+                comando.Parameters.Add("@cod", MySqlDbType.Int32).Value = textBox1.Text;
+                comando.CommandType = CommandType.Text;
+                //Comando para executar a query
+                comando.ExecuteNonQuery();
+
+                MessageBox.Show("Registro deletado com sucesso");
+                objetoconexao.Close();
+
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show("Não conectou " + erro);
+            }
+        }
+
+
+
     }
 }
